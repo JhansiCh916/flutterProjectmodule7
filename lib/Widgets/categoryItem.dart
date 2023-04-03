@@ -1,3 +1,4 @@
+import '../Screens/booksCategoryWiseScreen.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -8,7 +9,7 @@ class CategoryItem extends StatelessWidget {
   CategoryItem(this.title, this.id, this.color);
 
   void selectedCategoryOfBooks(BuildContext context) {
-    Navigator.of(context).pushNamed("categories",arguments: {
+    Navigator.of(context).pushNamed(BooksCategoryScreen.routeName,arguments: {
       "id" : id,
       "title" : title,
     });
