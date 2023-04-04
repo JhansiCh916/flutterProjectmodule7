@@ -13,7 +13,11 @@ class BookItem extends StatelessWidget {
   BookItem(this.id, this.title, this.imageUrl, this.pages, this.complexity, this.affordability);
   void selectBook(BuildContext context) {
     Navigator.of(context).pushNamed(BookDetailScreen.routeName, arguments: id
-    );
+    ).then((value) => {
+      if (value != null) {
+        // removeItem(value)
+      }
+    });
   }
 
   String get complexityText {
